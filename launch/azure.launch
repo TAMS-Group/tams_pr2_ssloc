@@ -1,0 +1,10 @@
+<launch>
+    <node name="ssloc" pkg="ssloc_ros" type="ssloc_ros">
+        <param name="frame_id" value="azure_kinect_microphone_0"/>
+        <param name="ssloc_threads" value="1"/>
+        <param name="mbss/ssl_threashold" value="5000.0"/>
+        <param name="recording/frame_length" value="0.25"/>
+        <param name="mbss/grid_res" value="0.07"/>
+        <rosparam command="load" file="$(find ssloc_ros)/param/azure_kinect.yaml" />
+    </node>
+</launch>
